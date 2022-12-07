@@ -1,0 +1,18 @@
+{%  extends '_base.html' %}
+
+{% block content %}
+<div>
+    <h2>Details about {{ series.name }}</h2>
+    <br>
+    <hr>
+    
+    <p>Author: {{ series.author }}</p>
+    <p>Description: {{ series.desc }}</p>
+    <nav>
+        <a href="{% url 'series_update' series.pk %}">Update series</a>
+        <a href="{% url 'series_delete' series.pk %}">Delete series</a>
+    </nav>
+    <br>
+
+</div>
+{% endblock content %}
